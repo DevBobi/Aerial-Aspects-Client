@@ -11,9 +11,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/home" element={<Home />}></Route>
-          <Route exact path="/" element={<Home />}>
-          </Route>
+          <Route path="/home" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
         </Routes>
       </Router>
     </div>

@@ -1,15 +1,19 @@
 import React from 'react';
+import Footer from '../../../Shared/Footer/Footer';
 import Navbar from '../../../Shared/Navbar/Navbar';
+import Products from '../AllProducts/Products/Products';
 import Banner from '../Banner/Banner';
 import Greetings from '../Greetings/Greetings';
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Navbar />
             <Banner />
             <Greetings />
-        </div>
+            <Products />
+            <Footer />
+        </>
     );
 };
 
