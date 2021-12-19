@@ -33,11 +33,6 @@ const Navbar = () => {
                                         Home
                                     </a>
                                 </li>
-                                <li className="nav-item">
-                                    <a href="/explore" className="nav-link">
-                                        Explore
-                                    </a>
-                                </li>
                                 {user?.email && (
                                     <li className="nav-item">
                                         <a href="/dashboard" className="nav-link">
@@ -62,7 +57,7 @@ const Navbar = () => {
                                     </li>
                                 ) : (
                                     <li className="nav-item">
-                                        <button onClick={""} className="btn btn-warning">
+                                        <button onClick={logout} className="btn btn-warning">
                                             Log Out
                                         </button>
                                     </li>

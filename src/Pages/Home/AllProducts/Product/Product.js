@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Product = ({ item }) => {
-    const { id, name, desc, img } = item;
+    const { _id, name, desc, img } = item;
     return (
         <div className="col-md-4 col-sm-12 products-card">
             <div className="card h-100 shadow border-0 ">
@@ -12,7 +12,7 @@ const Product = ({ item }) => {
                     <p className="card-text">{desc?.slice(0, 150) + "...."}</p>
                 </div>
                 <div className="text-center m-auto mb-2">
-                    <Link to={`/products/${id}`}>
+                    <Link to={`/products/${_id}`}>
                         <button className="btn btn-info text-white px-5 mb-3">
                             Purchase Now
                         </button>
