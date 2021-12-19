@@ -1,8 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../../Images/droneSvg.svg"
-// import cards from "../../assets/images/logo/cards_all.png";
-// import { FormControl, InputGroup } from "react-bootstrap";
 
 const Footer = () => {
     return (

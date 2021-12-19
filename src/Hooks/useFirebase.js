@@ -47,7 +47,7 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unsubscribe;
-    }, []);
+    }, [user.email, auth]);
 
     // Admin loading and checking from server --
     // Data is loading here because we can share data to another component

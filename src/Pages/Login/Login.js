@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import logo from "../../Images/userIcon.png";

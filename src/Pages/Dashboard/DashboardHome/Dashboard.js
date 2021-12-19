@@ -3,6 +3,8 @@ import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import AddProduct from "../AdminPages/AddProducts/AddProducts";
 import MakeAdmin from "../AdminPages/MakeAdmin/MakeAdmin";
+import AddReview from "../UserPages/AddReview/AddReview";
+import MyOrders from "../UserPages/MyOrders/MyOrders";
 
 const Dashboard = () => {
     const { user, logout, admin } = useAuth();
@@ -18,13 +20,14 @@ const Dashboard = () => {
                 </div>
                 <div style={{ height: "150vh" }} className="col-md-2 p-4 bg-secondary">
                     {/* Admins Options */}
+                    <Link to={`/home`}>
+                        <button className="btn btn-link fs-6 text-decoration-none text-white">
+                            Home
+                        </button>
+                    </Link>
                     {admin ? (
                         <>
-                            <Link to={`${url}/makeadmin`}>
-                                <button className="btn btn-link fs-6 text-decoration-none text-white">
-                                    <i className="fas fa-user-cog"></i> Make Admin
-                                </button>
-                            </Link>
+
                             {/* <Link to={`${url}/manageorders`}>
                                 <button className="btn btn-link fs-6 text-decoration-none text-white">
                                     <i className="far fa-list-alt"></i> Manage Orders
@@ -40,11 +43,16 @@ const Dashboard = () => {
                                     <i className="far fa-calendar-plus"></i> Add Product
                                 </button>
                             </Link>
+                            <Link to={`${url}/makeadmin`}>
+                                <button className="btn btn-link fs-6 text-decoration-none text-white">
+                                    <i className="fas fa-user-cog"></i> Make Admin
+                                </button>
+                            </Link>
                         </>
                     ) : (
                         <>
 
-                            {/* <Link to={`${url}/myorders`}>
+                            <Link to={`${url}/myorders`}>
                                 <button className="btn btn-link fs-6 text-decoration-none text-white">
                                     <i className="fas fa-list-ol"></i> My Orders
                                 </button>
@@ -53,7 +61,7 @@ const Dashboard = () => {
                                 <button className="btn btn-link fs-6 text-decoration-none text-white">
                                     <i className="far fa-comment-alt"></i> Review
                                 </button>
-                            </Link> */}
+                            </Link>
                         </>
                     )}
                     <button
@@ -76,12 +84,14 @@ const Dashboard = () => {
                                 maximize your comforts.
                             </h5>
                         </Route>
-                        {/* <Route path={`${path}/myorders`}>
-                            <MyOrders></MyOrders>
+                        <Route path={`${path}/myorders`}>
+                            <MyOrders />
                         </Route>
                         <Route path={`${path}/review`}>
-                            <AddReview></AddReview>
+                            <AddReview />
                         </Route>
+                        {/* 
+                        
                         <Route path={`${path}/manageorders`}>
                             <ManageOrders></ManageOrders>
                         </Route>

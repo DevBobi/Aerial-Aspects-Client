@@ -17,7 +17,7 @@ const Purchase = () => {
         fetch(`http://localhost:5000/products/${id}`)
             .then((res) => res.json())
             .then((data) => setProduct(data));
-    }, []);
+    }, [id]);
 
     // Form Functionality
     const { register, handleSubmit, reset } = useForm();
