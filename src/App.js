@@ -5,16 +5,19 @@ import {
   Route
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
+import AuthProvider from './Context/AuthProvider/AuithProvider';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route exact path="/" element={<Home />} />
-        </Routes>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
+          </Routes>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
