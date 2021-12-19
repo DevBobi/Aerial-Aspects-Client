@@ -10,8 +10,8 @@ const Reviews = () => {
     return (
         <div className="container mt-5">
             <h1 className="text-center text-secondary">
-                <i className="far fa-2x fa-comments text-success"></i> Our{" "}
-                <span className="text-success">Happy Customer</span> Says___
+                <i className="far fa-2x fa-comments text-info"></i>
+                <span className="text-info"> Client</span> Says__
             </h1>
             <div className="row my-5">
                 {reviews.map((review) => (

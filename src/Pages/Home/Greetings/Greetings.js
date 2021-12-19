@@ -22,7 +22,7 @@ const Greetings = () => {
                         </h1>
                     </div>
                     <h3 className="animate__animated animate__rubberBand text-center p-5">
-                        Looking for high end Drones? <br /> You're just few clicks away from us!
+                        Looking for high end Drones? <br /> Then you're just few clicks away!
                     </h3>
                 </div>
             </div>

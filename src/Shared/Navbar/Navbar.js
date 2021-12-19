@@ -49,6 +49,11 @@ const Navbar = () => {
                                                     Dashboard
                                                 </Link>
                                             </li>
+                                            <li className="dropdown-item">
+                                                <Link to="/explore" className="nav-link text-dark">
+                                                    Explore
+                                                </Link>
+                                            </li>
                                             <li> <Link onClick={logout} className="nav-link text-dark ps-4">
                                                 Log Out
                                             </Link></li>
