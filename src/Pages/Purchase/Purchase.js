@@ -39,8 +39,8 @@ const Purchase = () => {
             <Navbar />
             <div className="container-fluid row mt-3 details-container">
                 <h2 className="text-center mb-4">
-                    Want to own this <span className="text-danger">awesome</span> bird?{" "}
-                    <span className="text-success">Confirm</span> Please_
+                    Proceed your order <span className="text-danger">Please</span>
+
                 </h2>
                 <div className="col-md-6 col-sm-12">
                     <div className="card mb-3 m-auto">

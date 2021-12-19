@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import "./Navbar.css";
 
@@ -28,46 +29,38 @@ const Navbar = () => {
                             id="navbarSupportedContent"
                         >
                             <ul className="d-flex align-items-center justify-content-center navbar-nav ms-auto mb-2 mb-lg-0 fs-5 ">
-                                <li className="nav-item">
-                                    <a href="/" className="nav-link">
-                                        Home
-                                    </a>
-                                </li>
-                                {user?.email && (
-                                    <li className="nav-item">
-                                        <a href="/dashboard" className="nav-link">
-                                            Dashboard
-                                        </a>
-                                    </li>
-                                )}
-                                {user?.email && (
-                                    <li className="nav-item">
-                                        <small className="nav-link fs-5 text-info">
-                                            <i className="far fa-user me-2"></i>
-                                            {user.displayName}
-                                        </small>
-                                    </li>
-                                )}
 
                                 {!user?.email ? (
-                                    <li className="nav-item">
-                                        <a href="/login" className="nav-link">
-                                            Log In
-                                        </a>
-                                    </li>
+
+                                    <Link to="/login" className="nav-link btn btn">
+                                        <i className="far fa-user me-2"></i>
+                                        Login
+                                    </Link>
+
                                 ) : (
-                                    <li className="nav-item">
-                                        <button onClick={logout} className="btn btn-warning">
-                                            Log Out
+                                    <div class="dropdown">
+                                        <button class="btn btn text-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i className="far fa-user me-2"></i>
+                                            {user.displayName}
                                         </button>
-                                    </li>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li className="dropdown-item">
+                                                <Link to="/dashboard" className="nav-link text-dark">
+                                                    Dashboard
+                                                </Link>
+                                            </li>
+                                            <li> <Link onClick={logout} className="nav-link text-dark ps-4">
+                                                Log Out
+                                            </Link></li>
+                                        </ul>
+                                    </div>
                                 )}
                             </ul>
                         </div>
                     </div>
                 </nav>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 

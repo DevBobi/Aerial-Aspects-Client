@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import AddProduct from "../AdminPages/AddProducts/AddProducts";
+import MakeAdmin from "../AdminPages/MakeAdmin/MakeAdmin";
 
 const Dashboard = () => {
     const { user, logout, admin } = useAuth();
@@ -19,12 +20,12 @@ const Dashboard = () => {
                     {/* Admins Options */}
                     {admin ? (
                         <>
-                            {/* <Link to={`${url}/makeadmin`}>
+                            <Link to={`${url}/makeadmin`}>
                                 <button className="btn btn-link fs-6 text-decoration-none text-white">
                                     <i className="fas fa-user-cog"></i> Make Admin
                                 </button>
                             </Link>
-                            <Link to={`${url}/manageorders`}>
+                            {/* <Link to={`${url}/manageorders`}>
                                 <button className="btn btn-link fs-6 text-decoration-none text-white">
                                     <i className="far fa-list-alt"></i> Manage Orders
                                 </button>
@@ -81,15 +82,15 @@ const Dashboard = () => {
                         <Route path={`${path}/review`}>
                             <AddReview></AddReview>
                         </Route>
-                        <Route path={`${path}/makeadmin`}>
-                            <MakeAdmin></MakeAdmin>
-                        </Route>
                         <Route path={`${path}/manageorders`}>
                             <ManageOrders></ManageOrders>
                         </Route>
                         <Route path={`${path}/manageproducts`}>
                             <ManageProducts></ManageProducts>
                         </Route> */}
+                        <Route path={`${path}/makeadmin`}>
+                            <MakeAdmin />
+                        </Route>
                         <Route path={`${path}/addproduct`}>
                             <AddProduct></AddProduct>
                         </Route>
