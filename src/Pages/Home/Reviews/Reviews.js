@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://intense-badlands-84836.herokuapp.com/reviews")
             .then((res) => res.json())
             .then((data) => setReviews(data));
     }, []);
@@ -11,7 +11,7 @@ const Reviews = () => {
         <div className="container mt-5">
             <h1 className="text-center text-secondary">
                 <i className="far fa-2x fa-comments text-info"></i>
-                <span className="text-info"> Client</span> Says__
+                <span className="text-success"> Client</span> Says__
             </h1>
             <div className="row my-5">
                 {reviews.map((review) => (

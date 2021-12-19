@@ -17,7 +17,7 @@ const AddReview = () => {
         if (feedbackData) {
             axios
                 .post(
-                    "http://localhost:5000/reviews",
+                    "https://intense-badlands-84836.herokuapp.com/reviews",
                     feedbackData
                 )
                 .then((res) => {

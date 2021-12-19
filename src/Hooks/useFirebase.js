@@ -52,7 +52,7 @@ const useFirebase = () => {
     // Admin loading and checking from server --
     // Data is loading here because we can share data to another component
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://intense-badlands-84836.herokuapp.com/users/${user.email}`)
             .then((res) => res.json())
             .then((data) => setAdmin(data.admin));
     }, [user.email]);
@@ -71,7 +71,7 @@ const useFirebase = () => {
 
     const saveUser = (email, userName) => {
         const user = { email: email, displayName: userName };
-        fetch("http://localhost:5000/users", {
+        fetch("https://intense-badlands-84836.herokuapp.com/users", {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

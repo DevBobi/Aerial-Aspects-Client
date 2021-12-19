@@ -14,7 +14,7 @@ const Purchase = () => {
     console.log(product)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://intense-badlands-84836.herokuapp.com/products/${id}`)
             .then((res) => res.json())
             .then((data) => setProduct(data));
     }, [id]);
@@ -23,7 +23,7 @@ const Purchase = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         axios
-            .post("http://localhost:5000/orders", data)
+            .post("https://intense-badlands-84836.herokuapp.com/orders", data)
             .then((res) => {
                 //  Showing alert
                 if (res.data.insertedId) {

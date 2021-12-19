@@ -8,7 +8,7 @@ const AddProduct = () => {
 
     const onSubmit = (data) => {
         axios
-            .post("http://localhost:5000/products", data)
+            .post("https://intense-badlands-84836.herokuapp.com/products", data)
             .then((res) => {
                 //  Showing alert
                 if (res.data.insertedId) {
