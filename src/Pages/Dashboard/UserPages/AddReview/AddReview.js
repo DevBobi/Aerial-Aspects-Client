@@ -51,6 +51,7 @@ const AddReview = () => {
                             id="exampleInputEmail1"
                             aria-describedby="emailHelp"
                             disabled
+                            width="100px"
                         />
                     </div>
                     <div className="mb-3">

@@ -5,6 +5,15 @@ import Products from '../AllProducts/Products/Products';
 import Banner from '../Banner/Banner';
 import Greetings from '../Greetings/Greetings';
 import Reviews from '../Reviews/Reviews';
+import Slider from "react-slick";
+
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+};
 
 const Home = () => {
     return (
@@ -13,7 +22,8 @@ const Home = () => {
             <Banner />
             <Greetings />
             <Products />
-            <Reviews />
+            <Slider {...settings}> <Reviews /></Slider>
+
             <Footer />
         </>
     );

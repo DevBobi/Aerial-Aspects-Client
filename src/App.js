@@ -7,6 +7,8 @@ import Purchase from './Pages/Purchase/Purchase';
 import PrivateRoute from './PrivateRouter/PrivateRoute';
 import Dashboard from './Pages/Dashboard/DashboardHome/Dashboard';
 import Explore from './Pages/Explore/Explore';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

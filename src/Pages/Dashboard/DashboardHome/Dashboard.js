@@ -3,6 +3,7 @@ import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import AddProduct from "../AdminPages/AddProducts/AddProducts";
 import MakeAdmin from "../AdminPages/MakeAdmin/MakeAdmin";
+import ManageOrders from "../AdminPages/ManageOrders/ManageOrders";
 import AddReview from "../UserPages/AddReview/AddReview";
 import MyOrders from "../UserPages/MyOrders/MyOrders";
 
@@ -28,7 +29,7 @@ const Dashboard = () => {
                     {admin ? (
                         <>
 
-                            {/* <Link to={`${url}/manageorders`}>
+                            <Link to={`${url}/manageorders`}>
                                 <button className="btn btn-link fs-6 text-decoration-none text-white">
                                     <i className="far fa-list-alt"></i> Manage Orders
                                 </button>
@@ -37,7 +38,7 @@ const Dashboard = () => {
                                 <button className="btn btn-link fs-6 text-decoration-none text-white">
                                     <i className="fas fa-list-ol"></i> Manage Products
                                 </button>
-                            </Link> */}
+                            </Link>
                             <Link to={`${url}/addproduct`}>
                                 <button className="btn btn-link fs-6 text-decoration-none text-white">
                                     <i className="far fa-calendar-plus"></i> Add Product
@@ -90,14 +91,12 @@ const Dashboard = () => {
                         <Route path={`${path}/review`}>
                             <AddReview />
                         </Route>
-                        {/* 
-                        
+
+
                         <Route path={`${path}/manageorders`}>
                             <ManageOrders></ManageOrders>
                         </Route>
-                        <Route path={`${path}/manageproducts`}>
-                            <ManageProducts></ManageProducts>
-                        </Route> */}
+
                         <Route path={`${path}/makeadmin`}>
                             <MakeAdmin />
                         </Route>
